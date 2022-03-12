@@ -1,0 +1,16 @@
+.ext-rating {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+.ext-rating img {
+    width: 32px !important; /* important is necessary on Chrome */
+    height: 32px !important; /* important is necessary on Chrome */
+}
+.ext-rating span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}

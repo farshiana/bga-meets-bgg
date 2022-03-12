@@ -1,0 +1,31 @@
+.ext-popup {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-width: 216px;
+    height: 100px;
+    border-radius: 1em;
+}
+.ext-popup button {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 150px;
+    padding: 0.3em 1.2em;
+    border-radius: 2em;
+    font-weight: 300;
+    color: white;
+    background-color: #1d804c;
+}
+.ext-popup button:hover{
+    background-color: #147241;
+}
+.ext-popup button:disabled{
+    cursor: initial;
+    opacity: 0.65;
+}
+.ext-popup ul {
+    margin: 0px;
+    padding-inline-start: 0px;
+}
