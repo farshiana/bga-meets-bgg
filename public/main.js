@@ -1,9 +1,9 @@
 const BGG_APP_URL = 'https://boardgamegeek.com';
 const BGG_API_URL = 'https://api.geekdo.com/xmlapi2';
-const greenIconUrl = chrome.extension.getURL('images/hexagon-green.png');
-const blueIconUrl = chrome.extension.getURL('images/hexagon-blue.png');
-const purpleIconUrl = chrome.extension.getURL('images/hexagon-purple.png');
-const redIconUrl = chrome.extension.getURL('images/hexagon-red.png');
+const greenIconUrl = chrome.runtime.getURL('images/hexagon-green.png');
+const blueIconUrl = chrome.runtime.getURL('images/hexagon-blue.png');
+const purpleIconUrl = chrome.runtime.getURL('images/hexagon-purple.png');
+const redIconUrl = chrome.runtime.getURL('images/hexagon-red.png');
 
 const getDisplayedGames = () => {
   const links = document.getElementsByTagName('a');
@@ -67,12 +67,18 @@ const addGameRatings = (id, rating, elementsIds) => {
     iconUrl = greenIconUrl;
   } else if (rounded >= 7) {
     iconUrl = blueIconUrl;
-  } else if (rounded >= 6) {
+  } else if (rounded >= 5) {
     iconUrl = purpleIconUrl;
   }
 
+  const str = `<a class="ext-rating" href="${link}" target="_blank"><img src="${iconUrl}" /><span>${rounded}</span></a>`;
+  const parser = new DOMParser();
+
   elementsIds.forEach((elementId) => {
-    document.getElementById(elementId).innerHTML += `<a class="ext-rating" href="${link}" target="_blank"><img src="${iconUrl}" /><span>${rounded}</span></a>`;
+    const parsed = parser.parseFromString(str, `text/html`);
+    const links = parsed.getElementsByTagName('a');
+
+    document.getElementById(elementId).append(links[0]);
   });
 };
 
