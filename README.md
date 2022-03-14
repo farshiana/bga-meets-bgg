@@ -3,7 +3,7 @@ Browser extension to display boardgames ratings from [boardgamegeek](https://boa
 It uses [BGG XML API2](https://boardgamegeek.com/wiki/page/BGG_XML_API2) to fetch the data.
 
 ### Usage
-Add extension on Firefox using `about:debugging` and on Chrome using `chrome://extensions`.
+Add extension (public folder only) on Firefox using `about:debugging` and on Chrome using `chrome://extensions`.
 
 ![Popup screenshot](./popup.png?raw=true "Popup screenshot")
 ![BGA screenshot](./bga.png?raw=true "BGA screenshot")
