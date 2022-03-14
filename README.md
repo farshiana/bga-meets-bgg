@@ -1,5 +1,5 @@
 ## BGA meets BGG
-Browser extension to display boardgames ratings from [boardgamegeek](https://boardgamegeek.com) in [boardgamearena](boardgamearena.com).
+Browser extension to display boardgames ratings from [boardgamegeek](https://boardgamegeek.com) in [boardgamearena](https://boardgamearena.com).
 It uses [BGG XML API2](https://boardgamegeek.com/wiki/page/BGG_XML_API2) to fetch the data.
 
 ### Usage
